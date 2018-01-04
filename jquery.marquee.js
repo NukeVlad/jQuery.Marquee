@@ -1,6 +1,9 @@
 /**
  * jQuery.marquee - прокручивание текста, вместо старого тэга marquee
+ * Первое упоминание об этом способе я обнаружил Posted 10-Sep 2008 under code & jquery & marquee & plugin & project.
+ * https://disqus.com/by/remysharp/ в его блоге https://remysharp.com/2008/09/10/the-silky-smooth-marquee
  * @author Aamir Afridi - aamirafridi(at)gmail(dot)com / http://aamirafridi.com/jquery/jquery-marquee-plugin
+ * Мною, NukeVlad поизведено упорядочивание и локализация на русский язык http://nukeviet.ru/
  */;
 (function($) {
     $.fn.marquee = function(options) {
