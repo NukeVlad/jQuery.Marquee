@@ -1,11 +1,11 @@
 /**
- * jQuery.marquee - scrolling text like old marquee element
+ * jQuery.marquee - прокручивание текста, вместо старого тэга marquee
  * @author Aamir Afridi - aamirafridi(at)gmail(dot)com / http://aamirafridi.com/jquery/jquery-marquee-plugin
  */;
 (function($) {
     $.fn.marquee = function(options) {
         return this.each(function() {
-            // Extend the options if any provided
+            // Расширьте параметры, если таковые имеются.
             var o = $.extend({}, $.fn.marquee.defaults, options),
                 $this = $(this),
                 $marqueeWrapper, containerWidth, animationCss, verticalDir, elWidth,
@@ -13,7 +13,7 @@
                 playState = 'animation-play-state',
                 css3AnimationIsSupported = false,
 
-                // Private methods
+                // Частные методы
                 _prefixedEvent = function(element, type, callback) {
                     var pfx = ["webkit", "moz", "MS", "o", ""];
                     for (var p = 0; p < pfx.length; p++) {
@@ -37,36 +37,36 @@
                     $this.timer = setTimeout(animate, o.delayBeforeStart);
                 },
 
-                // Public methods
+                // Общественные методы
                 methods = {
                     pause: function() {
                         if (css3AnimationIsSupported && o.allowCss3Support) {
                             $marqueeWrapper.css(playState, 'paused');
                         } else {
-                            // pause using pause plugin
+                            // пауза с использованием плагина паузы
                             if ($.fn.pause) {
                                 $marqueeWrapper.pause();
                             }
                         }
-                        // save the status
+                        // сохранить статус
                         $this.data('runningStatus', 'paused');
-                        // fire event
+                        // возобновление события
                         $this.trigger('paused');
                     },
 
                     resume: function() {
-                        // resume using css3
+                        // возобновить использование css3
                         if (css3AnimationIsSupported && o.allowCss3Support) {
                             $marqueeWrapper.css(playState, 'running');
                         } else {
-                            // resume using pause plugin
+                            // возобновить использование плагина паузы
                             if ($.fn.resume) {
                                 $marqueeWrapper.resume();
                             }
                         }
-                        // save the status
+                        // сохранить статус
                         $this.data('runningStatus', 'resumed');
-                        // fire event
+                        // возобновить использование плагина паузы
                         $this.trigger('resumed');
                     },
 
@@ -75,7 +75,7 @@
                     },
 
                     destroy: function() {
-                        // Clear timer
+                        // Очистить таймер
                         clearTimeout($this.timer);
                         // Unbind all events
                         $this.find("*").addBack().unbind();
