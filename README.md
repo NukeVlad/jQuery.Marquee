@@ -17,59 +17,58 @@ A **5.56 KB** (minified)
 Links:
 -----
  - **Demo:** http://aamirafridi.com/jquery/jquery-marquee-plugin#examples
- - **jsFiddle:** http://jsfiddle.net/aamir/jc7F3/285/ to help you explain any issues you might face.
+ - **jsFiddle:** http://jsfiddle.net/aamir/jc7F3/285/ чтобы помочь вам в разъяснении любых проблем, с которыми вы можете столкнуться.
 
 Опции:
 --------
  - **allowCss3Support** Если вы хотите, чтобы плагин всегда анимировал, используя метод анимации jQuery, если браузер не поддерживает анимацию CSS3. По умолчанию ```true```
- - **css3easing** Работает, когда ```allowCss3Support``` is set to ```true``` - полный список см.: http://www.w3.org/TR/2013/WD-css3-transitions-20131119/#transition-timing-function . По умолчанию ```'linear'```
- - **easing** Требует плагин jQuery для замедления http://gsgd.co.uk/sandbox/jquery/easing/. По умолчанию ```'linear'```
+ - **css3easing** Работает, когда ```allowCss3Support``` установлено значение ```true``` - полный список см.: http://www.w3.org/TR/2013/WD-css3-transitions-20131119/#transition-timing-function . По умолчанию ```'linear'```
+ - **easing** Требуется плагин jQuery для замедления http://gsgd.co.uk/sandbox/jquery/easing/. По умолчанию ```'linear'```
  - **delayBeforeStart** Время в миллисекундах перед тем, как строка начинает анимацию. По умолчанию ```1000```
  - **direction** Направление, по которому будет выполнено движение ```'left' / 'right' / 'up' / 'down'```. По умолчанию ```'left'```. Примечание: нужно изменить это на ```ltr/rtl``` и т.д
  - **duplicated** Если объект нужно дублировать, чтобы показать эффект непрерывного потока. Используйте это только в том случае, если текст короче контейнера. По умолчанию ```false```
  - **duration** Продолжительность в миллисекундах, если вы хотите, чтобы ваш элемент перемещался. По умолчанию ```5000```.
  - **speed** Скорость будет превышать длительность. Скорость позволяет установить относительно постоянную скорость независимо от ширины содержащего элемента. Скорость измеряется в пикселях в секунду.
  - **gap** Разрыв в пикселях между тикерами. Будет работать только тогда, когда ```duplicated``` параметр ```true```. По умолчанию ```20```. Учтите: ```20``` означает ```20px``` поэтому нет необходимости указывать ```'20px'``` как значение.
- - **pauseOnHover** On hover pause the marquee. If browser supports CSS3 and ```allowCss3Support``` is set to ```true``` than it will be done using CSS3. Otherwise this will be done using jQuery plugin https://github.com/tobia/Pause. Default is ```false```. Check the demo page for a demo.
- - **pauseOnCycle** On cycle, pause the marquee for ```delayBeforeStart``` milliseconds.
- - **startVisible** The marquee will be visible in the start if set to `true`. Thanks to @nuke-ellington 👍
+ - **pauseOnHover** Пауза при наведении на объект. Если браузер поддерживает CSS3 и ```allowCss3Support``` имеет значение ```true``` это можно реализовать с помощью CSS3. Или с помощью плагина jQuery https://github.com/tobia/Pause. По умолчаню ```false```. Смотрите демо версию.
+ - **pauseOnCycle** В цикле приостановите движение ```delayBeforeStart``` миллисекунды.
+ - **startVisible** Шаблон будет отображаться в начале, если он установлен как `true`. Спасибо @nuke-ellington 👍
 
-Events:
+Србытия:
 ------
- - **beforeStarting:** Event will be fired on the element before animation starts.
- - **finished:** Event will be fired on the element after the animation finishes.
- - **paused:** Event will be fired on the element when the animation is paused.
- - **resumed:** Event will be fired on the element when the animation is resumed.
+ - **beforeStarting:** Событие будет запущено над элементом до начала анимации.
+ - **finished:** Событие будет запущено после того, как анимация закончится.
+ - **paused:** Событие будет запущено в элементе, когда анимация приостановлена.
+ - **resumed:** Событие будет запущено в элементе, когда анимация будет возобновлена.
 
-Methods:
+Параметры:
 ---------------
+Эти параметры можно использовать следующим образом:
 
-These methods can be used like this:
+ - Сначала инициализируйте выделение с любыми параметрами ``` var $mq = $('.marquee').marquee();```
+ - Затем в любое время вы можете вызвать следующие команды ```var $mq.marquee('NAME-OF-METHOD-AS-STRING');```
 
- - First initialize marquee with any options ``` var $mq = $('.marquee').marquee();```
- - Then at any time you can call following methods ```var $mq.marquee('NAME-OF-METHOD-AS-STRING');```
+Вот список всех команд:
 
-Here is the list of all methods:
+ - **pause**: Чтобы приостановить анимацию в любое время.
+ - **resume**: Чтобы возобновить анимацию после приостановки ранее.
+ - **toggle**: Для переключения между режимами паузы и возобновления анимации.
+ - **destroy**: Чтобы удалить плагин marquee из вашего элемента. Этот метод полезен, если вы загружаете / изменяете данные с помощью Ajax или только для другой строки. Вы можете комбинировать это с ```finished``` чтобы вы могли отображать некоторые данные, и вскоре анимация прекращается, вы можете изменить html и применить плагин снова. Подробнее см. Демонстрационную страницу (ссылки, приведенные выше).
 
- - **pause**: To pause the marquee at any time.
- - **resume**: To resume the marquee after being paused previously.
- - **toggle**: To toggle between pause and resume methods.
- - **destroy**: To remove marquee plugin from your element. This method is useful if you are loading/changing the data using Ajax or just another string. You can combine this with ```finished``` event so you can let marquee to show some data and soon it finishes showing, you can destroy it, change the html and than apply the plugin again. See the demo page for details (links provided above).
-
-Usage:
+Применение:
 ----
 
 ###HTML:
 
 ```html
-<div class='marquee'>Lorem ipsum dolor sit amet, consectetur adipiscing elit END.</div>
+<div class='marquee'>Это демонстрационный текст показывающий возможности marquee</div>
 ```
 
-or use this if you want to start the plugin with no options but want to use data attributes. You can use all the options listed above as data attributes. This is how you can use them:
+вы можете использовать плпгин таким образом, если вы хотите запустить плагин без выбора параметров, но хотите использовать атрибуты данных. Вы можете использовать все параметры, перечисленные выше в качестве атрибутов данных. Ниже пример, как вы можете использовать параметры;
 
 ```html
 <div class='marquee' data-duration='5000' data-gap='10' data-duplicated='true' >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit END.
+    Это демонстрационный текст показывающий возможности marquee
 </div>
 ```
 
@@ -77,29 +76,29 @@ or use this if you want to start the plugin with no options but want to use data
 ###CSS:
 ```css
 .marquee {
-  width: 300px; /* the plugin works for responsive layouts so width is not necessary */
+  width: 300px; /* плагин работает по заданной ширине макета если это нужно */
   overflow: hidden;
   border:1px solid #ccc;
 }
 ```
 
-###How to apply plugin:
+###Как использовать плагин:
 ```javascript
 /**
- * Example of starting a plugin with options.
- * I am just passing some of the options in the following example.
- * you can also start the plugin using $('.marquee').marquee(); with defaults
+ * Пример запуска плагина с параметрами.
+ * Тут некоторые из вариантов в следующем примере.
+ * Вы также можете начать использовать плагин $('.marquee').marquee(); со значениями по умолчанию.
 */
 $('.marquee').marquee({
-	//duration in milliseconds of the marquee
+	//длительность анимации в миллисекундах
 	duration: 15000,
-	//gap in pixels between the tickers
+	//зазор в пикселях между тикерами
 	gap: 50,
-	//time in milliseconds before the marquee will start animating
+	//Время в миллисекундах от старта
 	delayBeforeStart: 0,
-	//'left' or 'right'
+	//'left' или 'right'
 	direction: 'left',
-	//true or false - should the marquee be duplicated to show an effect of continues flow
+	//истина или ложь - должнен-ли быть повтор анимации продолжая демонстрировать эффект потока
 	duplicated: true
 });
 ```
