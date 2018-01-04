@@ -14,7 +14,7 @@ A **5.56 KB** (minified)
 - **Bower**: `bower install jQuery.Marquee`
 - **Скачать:** [zip](https://github.com/aamirafridi/jQuery.Marquee/archive/master.zip)
 
-Links:
+Ссылки:
 -----
  - **Demo:** http://aamirafridi.com/jquery/jquery-marquee-plugin#examples
  - **jsFiddle:** http://jsfiddle.net/aamir/jc7F3/285/ чтобы помочь вам в разъяснении любых проблем, с которыми вы можете столкнуться.
@@ -98,12 +98,12 @@ $('.marquee').marquee({
 	delayBeforeStart: 0,
 	//'left' или 'right'
 	direction: 'left',
-	//истина или ложь - должнен-ли быть повтор анимации продолжая демонстрировать эффект потока
+	//истина или ложь - должен-ли быть повтор анимации для продолжая эффекта потока
 	duplicated: true
 });
 ```
 
-###How to use methods:
+###Использование параметров:
 
 ```javascript
 var $mq = $('.marquee').marquee();
@@ -112,8 +112,8 @@ $('.someLink').click(function(){
 });
 ```
 
-Change content and re-apply the plugin.
-Check demo page for example: http://aamirafridi.com/jquery/jquery-marquee-plugin#examples
+Изменение содержания и повторного применения плагина.
+Проверьте демонстрационную страницу, например тут: http://aamirafridi.com/jquery/jquery-marquee-plugin#examples
 ```javascript
 $('.marquee')
 	.bind('finished', function(){
@@ -128,19 +128,19 @@ $('.marquee')
 
 ```
 
-###How to use events:
+###Как применять события:
 
-Check demo page for example: http://aamirafridi.com/jquery/jquery-marquee-plugin#examples
+Проверьте демонстрационную страницу, например тут: http://aamirafridi.com/jquery/jquery-marquee-plugin#examples
 
 ```javascript
 $('.marquee')
     .bind('beforeStarting', function () {
-        //code you want to execute before starting the animations
+        //код, который вы хотите выполнить перед запуском анимации
     })
     .bind('finished', function () {
-        //code you want to execute before after each animation loop
+        //код, который вы хотите выполнить перед каждым циклом анимации
     })
-    //Apply plugin
+    //Применить плагин
     .marquee({
         duration: 2000
     });
@@ -148,12 +148,12 @@ $('.marquee')
 
 ---
 
-Images:
+Изображения:
 ------
-If you are using images in marquee, sometimes the plugin cannot calculate accurate widths while images are still loading. You can try this instead of ```$(document).ready(function(){...})```
+Если вы хотите использовать изображения в области анимации, поймите, что иногда плагин не может вычислить точную ширину, пока изображение не загрузится. Вы можете попробовать выполнить так ```$(document).ready(function(){...})```
 
 ```javascript
-//if you have images in marquee
+//если у вас есть изображения в анимации
 $(window).load(function() {
     $('.marquee').marquee();
 });
@@ -161,11 +161,11 @@ $(window).load(function() {
 ----
 
 
-Updates:
+Обновления:
 -----------
 
 **Update (8 Mar 2016):**
-Now plugin have new option: **startVisible** The marquee will be visible in the start if set to `true`. Thanks to @nuke-ellington 👍
+Теперь у плагина есть новая опция: **startVisible** Шаблоны будут видны в начале, если установлено значение «истина». Благодаря @nuke-ellington 👍
 
 **Update (24 Jan 2014):**
 
