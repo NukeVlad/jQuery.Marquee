@@ -1,9 +1,10 @@
-jQuery-Marquee with CSS3 Support
+jQuery-Marquee с поддержкой CSS3
 ==============
 
-A **5.56 KB** (minified) jQuery plugin to scroll the text like the old traditional marquee.
+A **5.56 KB** (minified) 
+Плагин jQuery для прокрутки текста, замена, устаревшего традиционного тэга marquee
 
-Install:
+Установка:
 ----
  - **NPM:** `npm install jquery.marquee --save`
  - **CDN:** [jsdelivr.com](http://www.jsdelivr.com/#!jquery.marquee)
@@ -11,24 +12,24 @@ Install:
 <script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js" type="text/javascript"></script>
 ```
 - **Bower**: `bower install jQuery.Marquee`
-- **Download:** [zip](https://github.com/aamirafridi/jQuery.Marquee/archive/master.zip)
+- **Скачать:** [zip](https://github.com/aamirafridi/jQuery.Marquee/archive/master.zip)
 
 Links:
 -----
  - **Demo:** http://aamirafridi.com/jquery/jquery-marquee-plugin#examples
  - **jsFiddle:** http://jsfiddle.net/aamir/jc7F3/285/ to help you explain any issues you might face.
 
-Options:
+Опции:
 --------
- - **allowCss3Support** If you wish the plugin should animate always using jQuery animate method even if browser supporst CSS3 animations. Default is ```true```
- - **css3easing** Works when ```allowCss3Support``` is set to ```true``` - for full list see: http://www.w3.org/TR/2013/WD-css3-transitions-20131119/#transition-timing-function . Default is ```'linear'```
- - **easing** Requires jQuery easing plugin http://gsgd.co.uk/sandbox/jquery/easing/. Default is ```'linear'```
- - **delayBeforeStart** Time in milliseconds before the marquee starts animating. Default is ```1000```
- - **direction** Direction towards which the marquee will animate ```'left' / 'right' / 'up' / 'down'```. Default is ```'left'```. Todo: need to change this to ```ltr/rtl``` etc
- - **duplicated** Should the marquee be duplicated to show an effect of continuous flow. Use this only when the text is shorter than the container. Default is ```false```
- - **duration** Duration in milliseconds in which you want your element to travel. Default is ```5000```.
- - **speed** Speed will override duration. Speed allows you to set a relatively constant marquee speed regardless of the width of the containing element. Speed is measured in pixels per second.
- - **gap** Gap in pixels between the tickers. Will work only when the ```duplicated``` option is set to ```true```. Default is ```20```. Note: ```20``` means ```20px``` so no need to use ```'20px'``` as the value.
+ - **allowCss3Support** Если вы хотите, чтобы плагин всегда анимировал, используя метод анимации jQuery, если браузер не поддерживает анимацию CSS3. По умолчанию ```true```
+ - **css3easing** Работает, когда ```allowCss3Support``` is set to ```true``` - полный список см.: http://www.w3.org/TR/2013/WD-css3-transitions-20131119/#transition-timing-function . По умолчанию ```'linear'```
+ - **easing** Требует плагин jQuery для замедления http://gsgd.co.uk/sandbox/jquery/easing/. По умолчанию ```'linear'```
+ - **delayBeforeStart** Время в миллисекундах перед тем, как строка начинает анимацию. По умолчанию ```1000```
+ - **direction** Направление, по которому будет выполнено движение ```'left' / 'right' / 'up' / 'down'```. По умолчанию ```'left'```. Примечание: нужно изменить это на ```ltr/rtl``` и т.д
+ - **duplicated** Если объект нужно дублировать, чтобы показать эффект непрерывного потока. Используйте это только в том случае, если текст короче контейнера. По умолчанию ```false```
+ - **duration** Продолжительность в миллисекундах, если вы хотите, чтобы ваш элемент перемещался. По умолчанию ```5000```.
+ - **speed** Скорость будет превышать длительность. Скорость позволяет установить относительно постоянную скорость независимо от ширины содержащего элемента. Скорость измеряется в пикселях в секунду.
+ - **gap** Разрыв в пикселях между тикерами. Будет работать только тогда, когда ```duplicated``` параметр ```true```. По умолчанию ```20```. Учтите: ```20``` означает ```20px``` поэтому нет необходимости указывать ```'20px'``` как значение.
  - **pauseOnHover** On hover pause the marquee. If browser supports CSS3 and ```allowCss3Support``` is set to ```true``` than it will be done using CSS3. Otherwise this will be done using jQuery plugin https://github.com/tobia/Pause. Default is ```false```. Check the demo page for a demo.
  - **pauseOnCycle** On cycle, pause the marquee for ```delayBeforeStart``` milliseconds.
  - **startVisible** The marquee will be visible in the start if set to `true`. Thanks to @nuke-ellington 👍
