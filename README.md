@@ -117,11 +117,11 @@ $('.someLink').click(function(){
 ```javascript
 $('.marquee')
 	.bind('finished', function(){
-		//Change text to something else after first loop finishes
+		//Измените текст на что-то еще после завершения первого цикла
 		$(this).marquee('destroy');
-		//Load new content using Ajax and update the marquee container
+		//Загрузите новый контент с помощью Ajax и обновите контейнер выделения
 		$(this).html('Some new data loaded using ajax')
-			//Apply marquee plugin again
+			//Снова применить плагин marquee
 			.marquee()
 	})
 	.marquee();
